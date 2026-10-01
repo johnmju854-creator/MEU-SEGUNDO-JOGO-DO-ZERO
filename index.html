@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#171717">
+	<title>Arremesso decisivo</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="game-shell">
+		<header class="topbar">
+			<a class="brand" href="#" aria-label="Arremesso decisivo">
+				<span class="brand-mark" aria-hidden="true">●</span>
+				<span>ARREMESSO<span class="brand-accent"> DECISIVO</span></span>
+			</a>
+			<div class="top-note"><span class="live-dot"></span> QUADRA ABERTA <span class="top-divider">/</span> DESAFIO SOLO</div>
+		</header>
+
+		<section class="game-layout" aria-label="Jogo de basquete">
+			<aside class="score-rail">
+				<div class="rail-label">PLACAR</div>
+				<div class="score-number" id="score">00</div>
+				<div class="score-unit">PONTOS</div>
+				<div class="rail-rule"></div>
+				<div class="rail-label">CESTAS</div>
+				<div class="baskets-count"><span id="made-count">0</span><span class="count-slash">/</span><span id="target-count">2</span></div>
+				<div class="score-tip"><span class="mini-ball" aria-hidden="true"></span> 3 PTS<br>POR CESTA</div>
+				<div class="rail-bottom">TEMPORADA<br><b>2026</b></div>
+			</aside>
+
+			<div class="court-column">
+				<div class="game-meta">
+					<div class="phase-block">
+						<span class="eyebrow">DESAFIO ATUAL</span>
+						<h1 id="phase-name">Fase 1</h1>
+					</div>
+					<div class="timer-block" id="timer-block" aria-live="polite">
+						<span class="eyebrow">TEMPO</span>
+						<div class="timer-readout"><span id="timer">15</span><span class="timer-unit">SEG</span></div>
+					</div>
+				</div>
+
+				<div class="court-frame">
+					<canvas id="court" aria-label="Quadra de basquete animada"></canvas>
+					<div class="court-tag"><span class="court-tag-dot"></span> GINÁSIO CENTRAL</div>
+					<div class="distance-tag" id="distance-tag"><span class="distance-icon" aria-hidden="true">↗</span> <span id="distance-label">PERTO</span></div>
+					<div class="toast" id="toast" aria-live="polite"></div>
+					<section class="overlay" id="overlay" aria-live="polite">
+						<div class="overlay-content" id="overlay-content"></div>
+					</section>
+				</div>
+
+				<div class="controls-row">
+					<div class="aim-panel" aria-label="Indicador de precisão do arremesso">
+						<div class="aim-heading"><span>PRECISÃO</span><span id="aim-hint">CLIQUE NA FAIXA VERDE</span></div>
+						<div class="aim-track" id="aim-track">
+							<span class="aim-zone"></span>
+							<span class="aim-marker" id="aim-marker"></span>
+						</div>
+					</div>
+					<button class="shoot-button" id="shoot-button" type="button" disabled>
+						<span class="shoot-icon" aria-hidden="true">↗</span>
+						<span>ARREMESSAR</span>
+						<span class="shoot-key">ESPAÇO</span>
+					</button>
+				</div>
+				<div class="under-note"><span>SEGURE O RITMO.</span> ACERTE A FAIXA VERDE PARA MARCAR.</div>
+			</div>
+
+			<aside class="phase-rail">
+				<div class="rail-label">CAMINHO</div>
+				<ol class="phase-list" id="phase-list">
+					<li class="phase-step is-current" data-phase="0"><span class="step-number">01</span><span>Fase 1</span><span class="step-state"></span></li>
+					<li class="phase-step" data-phase="1"><span class="step-number">02</span><span>Fase 2</span><span class="step-state"></span></li>
+					<li class="phase-step" data-phase="2"><span class="step-number">03</span><span>Fase 3 <i>Final</i></span><span class="step-state"></span></li>
+				</ol>
+				<div class="phase-rail-bottom"><span class="star-burst" aria-hidden="true">✳</span><span>UM ARREMESSO<br>DE CADA VEZ.</span></div>
+			</aside>
+		</section>
+
+		<footer class="footer"><span>ARREMESSO DECISIVO <b>·</b> JOGO DE QUADRA</span><span>3 CESTAS. 1 TROFÉU. <b>VOCÊ CONSEGUE?</b></span></footer>
+	</main>
+	<script src="script.js"></script>
+</body>
+</html>
